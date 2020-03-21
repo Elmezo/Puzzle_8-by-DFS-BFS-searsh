@@ -84,7 +84,7 @@ public class NodeUtil {
         String destinationState;
         int cost = 0;
         for (int i = solutionStack.size() - 1; i >= 0; i--) {
-            System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+            System.out.println("######################################################");
             destinationState = solutionStack.get(i).getState();
             if (!sourceState.equals(destinationState)) {
                 System.out.println("Move " + destinationState.charAt(sourceState.indexOf('0')) + " " + findTransition(sourceState, destinationState));
