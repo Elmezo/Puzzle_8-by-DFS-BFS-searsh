@@ -8,9 +8,8 @@ public class Project_AI {
 
     public static void main(String[] args) {
 
-        System.out.println("please enter the arrangement of the number in the puzzle");
         Scanner s = new Scanner(System.in);
-        String rootState = s.next();
+        String rootState = "125340678";
         System.out.println("please enter 1)BFS , 2)DFS ?");
         int serchkey = s.nextInt();
 
@@ -21,7 +20,7 @@ public class Project_AI {
                 search.breadthFirstSearch();
                 long finishTime = System.currentTimeMillis();
                 long totalTime = finishTime - startTime;
-                System.out.println("Time  :" + totalTime);
+                System.out.println("Time  :" + totalTime + " :Millis Seccend");
                 break;
             case 2:
                 long startTime2 = System.currentTimeMillis();
@@ -29,7 +28,7 @@ public class Project_AI {
                 search2.depthFirstSearch();
                 long finishTime2 = System.currentTimeMillis();
                 long totalTime2 = finishTime2 - startTime2;
-                System.out.println("Time  :" + totalTime2);
+                System.out.println("Time  :" + totalTime2 + " :Millis Seccend");
 
                 break;
             default:
