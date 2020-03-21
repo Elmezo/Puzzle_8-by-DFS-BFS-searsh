@@ -7,7 +7,7 @@ public class Node {
     private boolean visited;
 
     private String state;
-    private ArrayList<Node> children;
+    private final ArrayList<Node> children;
     private Node parent;
     private int cost;
     private int estimatedCostToGoal;
