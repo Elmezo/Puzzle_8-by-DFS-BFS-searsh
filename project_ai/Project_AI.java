@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class Project_AI {
 
     final static private String GOAL_STATE = "012345678";
-
+    
     public static void main(String[] args) {
-
-        Scanner s = new Scanner(System.in);
+          Scanner s = new Scanner(System.in);
         String rootState = "125340678";
-        System.out.println("please enter 1)BFS , 2)DFS ?");
+        System.out.println("please enter 1)BFS , 2)DFS , 3)A* ?");
         int serchkey = s.nextInt();
 
         switch (serchkey) {
@@ -31,10 +30,18 @@ public class Project_AI {
                 System.out.println("Time  :" + totalTime2 + " :Millis Seccend");
 
                 break;
+            case 3:
+                long startTime3 = System.currentTimeMillis();
+                SearchTree search3 = new SearchTree(new Node(rootState), GOAL_STATE);
+                search3.aStar(SearchTree.Heuristic.H_TWO);
+                long finishTime3 = System.currentTimeMillis();
+                long totalTime3 = finishTime3 - startTime3;
+                System.out.println("Time  :" + totalTime3 + " :Millis Seccend");
+
+                break;
             default:
                 System.out.println("Rong answer");
         }
-
     }
 
 }
